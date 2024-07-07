@@ -1,12 +1,12 @@
 import os
 import streamlit as st
-from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 from langchain.prompts import PromptTemplate
 from config import Name, Data, SequenceChain
 
 # Load .env variables
-load_dotenv()
+# LLAMA_API_KEY = os.envrion["LLAMA_API_KEY"]
+LLAMA_API_KEY = st.secrets["LLAMA_API_KEY"]
 
 # UI and Interfaces
 st.title("BizBot: AI Business IdeaMaker")
